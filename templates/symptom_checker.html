@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Symptom Checker</title>
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Symptom Checker</h1>
-    <form id="symptomForm">
-        <label for="Symptom_1">Symptom 1:</label>
-        <input type="text" id="Symptom_1_acidity" name="Symptom_1_acidity" required><br>
-
-        <label for="Symptom_2">Symptom 2:</label>
-        <input type="text" id="Symptom_2_back_pain" name="Symptom_2_back_pain" required><br>
-
-        <label for="Symptom_3">Symptom 3:</label>
-        <input type="text" id="Symptom_3_burning_micturition" name="Symptom_3_burning_micturition" required><br>
-
-        <input type="submit" value="Submit">
-    </form>
-
-    <div id="prediction"></div>
-
-    <script>
-        document.getElementById("symptomForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = [value];
-            });
-
-            fetch("/predict", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
-            })
-            .then((response) => response.json())
-            .then((result) => {
-                document.getElementById("prediction").innerHTML = "Predicted Disease: " + result;
-            })
-            .catch((error) => {
-                console.error("Error occurred during prediction:", error);
-                document.getElementById("prediction").innerHTML = "Error occurred during prediction";
-            });
-        });
-    </script>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center mb-4">Disease Prediction</h1>
+                <form action="/predict" method="post">
+                    <div class="form-group">
+                        <label for="symptom_1">Symptom 1:</label>
+                        <input type="text" class="form-control" name="symptom_1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptom_2">Symptom 2:</label>
+                        <input type="text" class="form-control" name="symptom_2" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptom_3">Symptom 3:</label>
+                        <input type="text" class="form-control" name="symptom_3" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                </form>
+                {% if prediction %}
+                    <p class="mt-3">Predicted Disease: {{ prediction }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>
