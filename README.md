@@ -10,7 +10,7 @@ This project revolves around creating a machine learning model to predict diseas
 
 # Getting Started
 
-Our project began with data exploration and defining its scope. We decided to work with a dataset from [Kaggle](https://kaggle.com) and imported it into a Jupyter Notebook. This marked the start of our data preprocessing journey. We handled several CSV files containing disease and severity information. By merging them based on common columns and discarding irrelevant ones, we prepared the data for model training. Throughout the preprocessing, we encountered different challenges, which we overcame by focusing solely on diseases and symptoms, aligning with our initial goal.
+Our project began with data exploration and defining its scope. We decided to work with a dataset from [Kaggle](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset?select=dataset.csv) and imported it into a Jupyter Notebook. This marked the start of our data preprocessing journey. We handled several CSV files containing disease and severity information. By merging them based on common columns and discarding irrelevant ones, we prepared the data for model training. Throughout the preprocessing, we encountered different challenges, which we overcame by focusing solely on diseases and symptoms, aligning with our initial goal.
 
 # Model Training
 
@@ -45,4 +45,4 @@ Seth Beverley| https://github.com/SNbeverley
 
 # Resources
 
-[Kaggle](https://kaggle.com)
+[Kaggle](https://kaggle.com](https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset?select=dataset.csv)https://www.kaggle.com/datasets/itachi9604/disease-symptom-description-dataset?select=dataset.csv)
