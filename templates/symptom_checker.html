@@ -11,16 +11,50 @@
                 <h1 class="text-center mb-4">Disease Prediction</h1>
                 <form action="/predict" method="post">
                     <div class="form-group">
-                        <label for="symptom_1">Symptom 1:</label>
-                        <input type="text" class="form-control" name="symptom_1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="symptom_2">Symptom 2:</label>
-                        <input type="text" class="form-control" name="symptom_2" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="symptom_3">Symptom 3:</label>
-                        <input type="text" class="form-control" name="symptom_3" required>
+                        <label>Symptoms (Choose all symptoms for prediction of disease):</label><br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <input type="checkbox" name="symptoms" value="Symptom_1_acidity"> Acidity<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_back_pain"> Back Pain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_bladder_discomfort"> Bladder Discomfort<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_breathlessness"> Breathlessness<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_burning_micturition"> Burning Micturition<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_chest_pain"> Chest Pain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_chills"> Chills<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_constipation"> Constipation<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_continuous_sneezing"> Continuous Sneezing<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_cough"> Cough<br>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" name="symptoms" value="Symptom_1_cramps"> Cramps<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_fatigue"> Fatigue<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_headache"> Headache<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_high_fever"> High Fever<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_indigestion"> Indigestion<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_itching"> Itching<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_joint_pain"> Joint Pain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_mood_swings"> Mood Swings<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_muscle_wasting"> Muscle Wasting<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_muscle_weakness"> Muscle Weakness<br>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" name="symptoms" value="Symptom_1_neck_pain"> Neck Pain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_pain_during_bowel_movements"> Pain During Bowel Movements<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_patches_in_throat"> Patches in Throat<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_pus_filled_pimples"> Pus Filled Pimples<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_shivering"> Shivering<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_skin_rash"> Skin Rash<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_stiff_neck"> Stiff Neck<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_stomach_pain"> Stomach Pain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_sunken_eyes"> Sunken Eyes<br>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="checkbox" name="symptoms" value="Symptom_1_vomiting"> Vomiting<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_weakness_in_limbs"> Weakness in Limbs<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_weight_gain"> Weight Gain<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_weight_loss"> Weight Loss<br>
+                                <input type="checkbox" name="symptoms" value="Symptom_1_yellowish_skin"> Yellowish Skin<br>
+                        
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Predict</button>
                 </form>
